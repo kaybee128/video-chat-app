@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Microsoft Teams -By Kritika</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/6510466b6c.js" crossorigin="anonymous"></script>
+    <script>
+        const params = new URLSearchParams(location.search);
+        if (!params.get("room")) location.href = "/";
+    </script>
+    <!-- <script src="/node_modules/recordrtc/RecordRTC.js">
+    </script>
+    <script src="../public/js/screenshare.js"></script>
+    <script src="../public/js/record.js"></script> -->
+    <script defer src="./js/room.js"></script>
+</head>
+
+<body>
+    <div class="boxforname" id="boxforname">
+        <div class="box">
+            <div class="entername-head">Enter Your Name</div>
+            <input type="text" class="area-for-name" placeholder="Type here.." id="area-for-name"></input><br>
+            <button class="continue-in-box">Continue...</button>
+
+        </div>
+    </div>
+    <div class="vc-page">
+        <div class="vc-left">
+
+            <div class="vdobox-single" id="vc-box">
+                <div class="show-videobox">
+                    <video class="show-videoframe" id="vd1" autoplay playsinline>
+                    </video>
+                    <div class="name1" id="name2">yourname</div>
+                    <div class="mutebtn" id="mymuteicon"><i class="fas fa-microphone-slash"></i></div>
+                    <div class="shutvid" id="shutmyvid">Video Off</div>
+                </div>
+            </div>
+
+            <div class="doodleboard-cont"><canvas id="doodleboard" height="1000" width="1000"></canvas>
+                <div class="colorbar">
+                    <div class="black" onclick="colorit('black')"></div>
+                    <div class="red" onclick="colorit('#e74c3c')"></div>
+                    <div class="yellow" onclick="colorit('#f1c40f')"></div>
+                    <div class="green" onclick="colorit('#badc58')"></div>
+                    <div class="blue" onclick="colorit('#3498db')"></div>
+                    <div class="orange" onclick="colorit('#e67e22')"></div>
+                    <div class="purple" onclick="colorit('#9b59b6')"></div>
+                    <div class="pink" onclick="colorit('#fd79a8')"></div>
+                    <div class="brown" onclick="colorit('#834c32')"></div>
+                    <div class="grey" onclick="colorit('gray')"></div>
+                    <div class="eraser" onclick="eraseit()"><i class="fas fa-eraser"></i></div>
+                    <div class="clearboard" onclick="clrbrd()"><i class="fas fa-trash-alt"></i></div>
+                </div>
+            </div>
+
+            <div class="bottombar">
+                <div class="utils">
+
+                    <div class="audio">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="novideo">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="sharescreen icnbtn">
+                        <i class="fas fa-desktop" id="1"></i>
+                        <i class="fas fa-desktop" id="2"></i>
+                        <span class="icnbtntext">Share Screen</span>
+                    </div>
+                    <div class="board-icon icnbtn">
+                        <i class="fas fa-chalkboard"></i>
+                        <span class="icnbtntext">Whiteboard</span>
+                    </div>
+                    <div class="endmeet icnbtn">
+                        <i class="fas fa-phone-slash"></i>
+                        <span class="icnbtntext">Leave Call</span>
+                    </div>
+                    <div class="record icnbtn">
+                        <i class="fas fa-phone-slash"></i>
+                        <span class="icnbtntext indic">record</span>
+                    </div>
+
+                </div>
+                <div class="copycode-cont">
+                    <div class="joinroomcode"></div>
+                    <button class="copycode-button" onclick="CopyClassText()">Invite Link</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="vc-right">
+            <div class="chat-title">
+
+                <div class="chats"><i class="fas fa-comment-alt mr-1"></i>Chats</div>
+                <div class="Participants"><i class="fas fa-users mr-1"></i>Participants</div>
+
+            </div>
+
+            <div class="chatbar">
+
+            </div>
+            <div class="chatbar-input">
+                <div class="kk-cont"><input type="text" class="chat-userinput" placeholder="Type chat here.."></div>
+                <div class="kk-send"><button class="sendbtn">Send</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- <script src="js/room.js"></script> -->
+    
+   
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-peer/9.1.2/simplepeer.min.js"></script>  
+      
+</body>
+
+</html>
+
