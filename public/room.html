@@ -8,16 +8,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.scss">
     <script src="https://kit.fontawesome.com/6510466b6c.js" crossorigin="anonymous"></script>
     <script>
         const params = new URLSearchParams(location.search);
         if (!params.get("room")) location.href = "/";
     </script>
-    <script src="/node_modules/recordrtc/RecordRTC.js">
-    </script>
-    <script src="../public/js/screenshare.js"></script>
-    <script src="../public/js/record.js"></script>
-    <script src="../public/js/chat.js"></script>
+   
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -129,7 +126,9 @@
     </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/room.js"></script>
-    
+     <!-- Accessibility Code for "msteams-bykritika.herokuapp.com" --> 
+     <script> window.interdeal = { "sitekey": "18834fe64f2788467dd37218801a38b0", "Position": "Left", "Menulang": "EN", "domains": { "js": "https://cdn.equalweb.com/", "acc": "https://access.equalweb.com/" }, "btnStyle": { "vPosition": [ "80%", null ], "scale": [ "0.8", "0.8" ], "color": { "main": "#5646a4", "second": "#d2c6c6" }, "icon": { "type": 7, "shape": "semicircle", "outline": false } } }; (function(doc, head, body){ var coreCall = doc.createElement('script'); coreCall.src = 'https://cdn.equalweb.com/core/3.0.3/accessibility.js'; coreCall.defer = true; coreCall.integrity = 'sha512-7eVrsWwFQXxbr/QB7Zt+wVSQqLq8ulYJHplOZ5rv/8cre3RPseIPBmSERndeTFrpHRX8eDnIzwNckqynpi6IfA=='; coreCall.crossOrigin = 'anonymous'; coreCall.setAttribute('data-cfasync', true ); body? body.appendChild(coreCall) : head.appendChild(coreCall); })(document, document.head, document.body); </script>
+              
    
         <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-peer/9.1.2/simplepeer.min.js"></script>  
       

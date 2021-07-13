@@ -292,7 +292,8 @@ navbar .logo {
 }
 .vc-page .vc-left {
   width: 80%;
-  background-color: #231818;
+  background-image:url(../css/cool-background.png);
+  backdrop-filter: blur(2px);
   height: 100vh;
   padding: 50px;
   text-align: center;
@@ -547,9 +548,10 @@ navbar .logo {
   justify-content: center;
 }
 .vc-page .vc-left .bottombar .utils .audio {
-  background-color: #222524;
+  /* background-color: #222524; */
+  background-color: #d8d8d8;
   text-align: center;
-  color: white;
+  color: rgb(29, 28, 28);
   padding: 10px;
   height: 40px;
   width: 40px;
@@ -561,10 +563,11 @@ navbar .logo {
   background-color: #393e46;
 }
 .vc-page .vc-left .bottombar .utils .novideo {
-  background-color: #212423;
+  /* background-color: #212423; */
+  background-color: #d8d8d8;
   text-align: center;
   margin-left: 10px;
-  color: white;
+  color: rgb(36, 34, 34);
   padding: 10px;
   height: 40px;
   width: 40px;
@@ -593,7 +596,7 @@ navbar .logo {
   background-color: #393e46;
 }
 .vc-page .vc-left .bottombar .utils .board-icon {
-  background-color: #d8d8d8;
+  background-color: #d8d8d8; 
   text-align: center;
   color: #393e46;
   margin-left: 10px;
@@ -675,12 +678,13 @@ navbar .logo {
   background: #c5c5c5;
 }
 .vc-page .vc-right ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: rgb(233, 227, 227);
 }
 .vc-page .vc-right .chat-title {
   font-weight: bold;
   color: #393e46;
   background-color: #ffffff;
+  opacity: 0.8;
   width: 100%;
   display: flex;
   border-bottom: 2px solid #393e46;
@@ -699,7 +703,8 @@ navbar .logo {
   cursor: pointer;
 }
 .vc-page .vc-right .chatbar {
-  background-color: #dad5d5;
+  background-color: #e6e2f1;
+  backdrop-filter: blur(1px);
   height: 75vh;
   padding: 10px;
   padding-top: 10px;
@@ -708,7 +713,7 @@ navbar .logo {
 .vc-page .vc-right .chatbar .message {
   margin-bottom: 15px;
   margin-left: 10px;
-  background-color: #dbd1d1;
+  background-color: #cac7d1;
   border-radius: 2px;
   word-break: break-all;
   word-wrap: break-word;
@@ -766,7 +771,7 @@ navbar .logo {
   font-size: 0.85rem;
   border-radius: 2px;
   transition: background-color 0.5s;
-  margin-right: 3px;
+  margin-right: 7px;
 }
 .vc-page .vc-right .chatbar-input .sendbtn:hover {
   color: #212022;
@@ -1048,4 +1053,26 @@ element.style {
 }
 .novideo:visited {
   background-color: rgb(127 134 132) !important;
+}
+
+.pagebox {
+  margin-top: 20px;
+}
+
+.boxforname {
+  overflow: visible !important;
+  overscroll-behavior: hidden !important;
+  background-image:url(../css/cool-background.png);
+}
+
+.chatbar{
+  opacity: 0.3 !important;
+}
+ .audio .utils .sharescreen .novideo .record .board-icon{
+  background-color: #949090 !important;
+  color: black !important ;
+}
+.record {
+  
+  margin-left: 10px !important ;
 }

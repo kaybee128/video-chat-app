@@ -9,6 +9,7 @@
     "express": "^4.17.1",
     "express-flash": "0.0.2",
     "express-openid-connect": "^2.4.0",
+    "log4js": "^6.3.0",
     "moment": "^2.29.1",
     "nodemon": "^2.0.8",
     "peer": "^0.6.1",
@@ -17,7 +18,8 @@
     "socket.io": "^2.3.0",
     "uuid": "^8.3.2",
     "webrtc": "^1.14.1",
-    "webrtc-adapter": "^8.0.0"
+    "webrtc-adapter": "^8.0.0",
+    "winston": "^3.3.3"
   },
   "devDependencies": {},
   "scripts": {
@@ -25,5 +27,13 @@
     "start": "node server.js"
   },
   "author": "kritika",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaybee128/teamsclone-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kaybee128/teamsclone-/issues"
+  },
+  "homepage": "https://github.com/kaybee128/teamsclone-#readme"
 }

@@ -588,6 +588,8 @@ videoBtn.addEventListener('click', () => {
         videoBtn.innerHTML = `<i class="fas fa-video-slash"></i>`;
         videoAllowed = 0;
         videoBtn.style.backgroundColor = "#b12c2c";
+        
+
 
         if (mystream) {
             mystream.getTracks().forEach(track => {
@@ -608,6 +610,7 @@ videoBtn.addEventListener('click', () => {
         videoBtn.innerHTML = `<i class="fas fa-video"></i>`;
         videoAllowed = 1;
         videoBtn.style.backgroundColor = "#d8d8d8";
+        videoBtn.style.Color = "black";
         if (mystream) {
             mystream.getTracks().forEach(track => {
                 if (track.kind === 'video')
@@ -629,7 +632,7 @@ audioBtn.addEventListener('click', () => {
         }
         audioBtn.innerHTML = `<i class="fas fa-microphone-slash"></i>`;
         audioAllowed = 0;
-        audioBtn.style.backgroundColor = "#b12c2c";
+        audioBtn.style.backgroundColor = "#d8d8d8";
         if (mystream) {
             mystream.getTracks().forEach(track => {
                 if (track.kind === 'audio')
