@@ -704,7 +704,7 @@ navbar .logo {
 }
 .vc-page .vc-right .chatbar {
   background-color: #e6e2f1;
-  backdrop-filter: blur(1px);
+  
   height: 75vh;
   padding: 10px;
   padding-top: 10px;
@@ -1065,9 +1065,7 @@ element.style {
   background-image:url(../css/cool-background.png);
 }
 
-.chatbar{
-  opacity: 0.3 !important;
-}
+
  .audio .utils .sharescreen .novideo .record .board-icon{
   background-color: #949090 !important;
   color: black !important ;
@@ -1075,4 +1073,8 @@ element.style {
 .record {
   
   margin-left: 10px !important ;
+}
+html{
+  overscroll-behavior: hidden;
+  overflow-x: hidden !important;
 }
