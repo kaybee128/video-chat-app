@@ -129,19 +129,35 @@ io.on('connect', socket => {
         rooms[socketroom[socket.id]].splice(index, 1);
         io.to(socketroom[socket.id]).emit('user count', rooms[socketroom[socket.id]].length);
         delete socketroom[socket.id];
-        console.log('--------------------');
-        console.log(rooms[socketroom[socket.id]]);
+        logger.info('--------------------');
+        logger.info(rooms[socketroom[socket.id]]);
 
         //toDo: push socket.id out of rooms
     });
 }) 
 
 
+// basic debugging logger added
+const pino = require('pino');
+const expressPino = require('express-pino-logger');
+
+const logger = pino({ level: process.env.LOG_LEVEL || 'info' });
+const expressLogger = expressPino({ logger });
+
+
+app.use(expressLogger);
+
+app.get('/', (req, res) => {
+ logger.debug('Calling res.send');
+ res.send('Hello World');
+});
+
+
 
 server.listen(PORT, () => {
     // logger.info('Application is running');
 
-console.log(`Server is up and running on port ${PORT}`);
+logger.info(`Server is up and running on port ${PORT}`);
 
 });
 
