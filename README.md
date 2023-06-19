@@ -13,18 +13,14 @@ The app supports high-quality video calls akin to enterprise-level systems, and 
 5. Enjoy the application.
 
 **TECH STACK**
--HTML
--CSS
--JavaScript 
--NodeJS
-
--Express
-
--WebRTC
-
--SocketIO
-
--RecordRTC
+1. HTML
+2. CSS
+3. JavaScript 
+4. NodeJS
+5. Express
+6. WebRTC
+7. SocketIO
+8. RecordRTC
 
 **CONTACT**
 
