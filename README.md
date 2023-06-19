@@ -26,3 +26,6 @@ The app supports high-quality video calls akin to enterprise-level systems, and 
 
 In case of any suggestions or enquires, feel free to reach out to the contributors.
 
+**IMAGES**
+<img width="960" alt="image" src="https://github.com/kaybee128/video-chat-app/assets/69294133/b74b9c9c-6a31-44eb-8d22-525d567559b5">
+<img width="958" alt="image" src="https://github.com/kaybee128/video-chat-app/assets/69294133/035ed2cc-6a7e-4a40-ab03-4c2098d5eceb">
