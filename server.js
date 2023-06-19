@@ -3,27 +3,48 @@ const path = require('path');
 const express = require('express')
 const http = require('http')
 const moment = require('moment');
+// @ts-ignore
 const socketio = require('socket.io');
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT ||8000;
 const app = express();
 
 const server = http.createServer(app);
 const io = socketio(server);
 
 
-// authentication server js
-require('dotenv').config();
+// const { auth } = require('express-openid-connect');
 
-const { auth } = require('express-openid-connect');
-app.use(
-  auth({
-    issuerBaseURL: process.env.ISSUER_BASE_URL,
-    baseURL: process.env.BASE_URL,
-    clientID: process.env.CLIENT_ID,
-    secret: process.env.SECRET,
-    idpLogout: true,
-  })
-);
+// const config = {
+//   authRequired: false,
+//   auth0Logout: true,
+//   secret: 'a long, randomly-generated string stored in env',
+//   baseURL: 'http://localhost:5500',
+//   clientID: '1GbGXUZLO27KnRvazXRQge2XSiKR2T1O',
+//   issuerBaseURL: 'https://bearahand.us.auth0.com'
+// };
+
+// // auth router attaches /login, /logout, and /callback routes to the baseURL
+// app.use(auth(config));
+
+// // req.isAuthenticated is provided from the auth router
+// app.get('/', (req, res) => {
+//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+// });
+
+
+// authentication server js
+// require('dotenv').config();
+
+// const { auth } = require('express-openid-connect');
+// app.use(
+//   auth({
+//     issuerBaseURL: process.env.ISSUER_BASE_URL,
+//     baseURL: process.env.BASE_URL,
+//     clientID: process.env.CLIENT_ID,
+//     secret: process.env.SECRET,
+//     idpLogout: true,
+//   })
+// );
 
 app.use(express.static(path.join(__dirname, 'public')));
 // // req.isAuthenticated is provided from the auth router
@@ -54,7 +75,7 @@ io.on('connect', socket => {
         videoSocket[socket.id] = 'on';
 
         if (rooms[roomid] && rooms[roomid].length > 0) {
-            rooms[roomid].push(socket.id);
+            rooms[roomid].pushs(socket.id);
             socket.to(roomid).emit('message', `${username} joined the room.`, 'Teams:', moment().format(
                 "h:mm a"
             ));
