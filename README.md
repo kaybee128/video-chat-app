@@ -12,16 +12,24 @@ The app supports high-quality video calls akin to enterprise-level systems, and 
 4. Follow up with this command- nodemon server.js
 5. Enjoy the application.
 
-**Tech Stack**
-HTML
-CSS
-JavaScript 
-NodeJS
-Express
-WebRTC
-SocketIO
-RecordRTC
+**TECH STACK**
+-HTML
+
+-CSS
+
+-JavaScript 
+
+-NodeJS
+
+-Express
+
+-WebRTC
+
+-SocketIO
+
+-RecordRTC
 
 **CONTACT**
+
 In case of any suggestions or enquires, feel free to reach out to the contributors.
 
