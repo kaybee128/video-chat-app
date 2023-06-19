@@ -14,11 +14,8 @@ The app supports high-quality video calls akin to enterprise-level systems, and 
 
 **TECH STACK**
 -HTML
-
 -CSS
-
 -JavaScript 
-
 -NodeJS
 
 -Express
